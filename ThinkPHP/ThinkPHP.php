@@ -34,3 +34,4 @@ if(defined('ENGINE_NAME')) {
 	    require THINK_PATH.'Common/runtime.php';
 	}	
 }
+?>
