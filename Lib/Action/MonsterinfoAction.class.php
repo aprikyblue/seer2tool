@@ -38,11 +38,11 @@ class MonsterinfoAction extends Action {
         $this->display();
     }
     protected function getAICondSQL(){
-    //set this->ai before use this function, maybe you can get it from URL param
+    //set this->ai before use this function, maybe you can get it from URL params
         if ($this->ai){
             $sql = "TRUE";
         }else{
-            $sql = "( (`ID`<='1000' OR `ID`='1100' OR `ID`='1101') AND `ID`<>'500' )";
+            $sql = "( (`ID`<='1000' AND `ID`<>'500') OR `ID`='1100' OR `ID`='1101')";
         }
         return $sql;
     }
